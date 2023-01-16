@@ -1,13 +1,13 @@
 // F(0) = 0 F(1) = 1 F(n) = F(n-1) + F(n-2)
-function Fibonacci 4 // 4 lokalne varijable za iterativnu implimentaciju
+function Fibonacci 4
     push argument 0
     push constant 0
     eq
-    if-goto END0 // n = 0
+    if-goto END0
     push argument 0
     push constant 1
     eq
-    if-goto END1 // n = 1
+    if-goto END1
     push argument 0
     pop local 0
     push constant 0
@@ -21,7 +21,7 @@ function Fibonacci 4 // 4 lokalne varijable za iterativnu implimentaciju
         push constant 1
         eq
         if-goto END
-        push local 1  // lcl 3 = lcl 1 + lcl 2,  lcl 1 <- lcl 2, lcl 2 <- lcl 3
+        push local 1
         push local 2
         add
         pop local 3
@@ -29,7 +29,7 @@ function Fibonacci 4 // 4 lokalne varijable za iterativnu implimentaciju
         pop local 1
         push local 3
         pop local 2                       
-        push local 0  // decrement
+        push local 0 
         push constant 1
         sub
         pop local 0
