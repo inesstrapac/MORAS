@@ -1,0 +1,39 @@
+function Mid 3
+    push argument 0
+    push argument 1
+    gt
+    if-goto GT1    
+    push argument 0
+    push argument 2
+    gt
+    if-goto END0    
+    push argument 1
+    push argument 2
+    lt
+    if-goto END1  
+    goto END2       
+    label GT1
+    push argument 0
+    push argument 2
+    lt
+    if-goto END0    
+    push argument 1
+    push argument 2
+    gt
+    if-goto END1
+    goto END2    
+    label END0
+    push argument 0
+    pop local 0
+    goto END 
+    label END1
+    push argument 1
+    pop local 0
+    goto END   
+    label END2
+    push argument 2
+    pop local 0
+    label END
+    push local 0
+    return
+    

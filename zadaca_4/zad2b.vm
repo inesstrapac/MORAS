@@ -1,0 +1,9 @@
+sp
+call zad2b.Main 0
+ep
+
+function Main 0
+    push constant 20
+    call fibonacci.Fibonacci 1 // poziv na f-ju fibonacci s n = 20
+    pop static 0
+    return
